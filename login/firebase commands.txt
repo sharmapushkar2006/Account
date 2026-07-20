@@ -1,0 +1,30 @@
+import { getDatabase, ref, set, push, update, remove, get, onValue } from './firebase.js';
+
+onValue(ref(db, 'users/pushkar'), (snapshot) => {
+    
+});
+
+get(ref(db, 'users/pushkar')).then((snapshot) => {
+    if (snapshot.exists()) {
+        console.log("Data mil gaya: ", snapshot.val());
+    } else {
+        console.log("Koi data nahi hai!");
+    }
+});
+
+remove(ref(db, 'users/pushkar'));
+
+update(ref(db, 'users/pushkar'), {
+    status: "Completed"
+});
+
+push(ref(db, 'users'), {
+    name: "Pushkar",
+    course: "Java Intern",
+    status: "Active"
+});
+
+set(ref(db, 'users/pushkar'), {
+    course: "Java",
+    status: "Active"
+});

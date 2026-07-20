@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Login to your account</title>
+    <link rel='stylesheet' href='main.css'>
+    <script type='module' src='firebase.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="page-shell">
+        <div class="app-main" id="app-main">
+            <div class="top">
+                <p class="eyebrow">Secure access</p>
+                <h2>Login to your account</h2>
+                <p class="subtext">Welcome back! Sign in to continue to your dashboard.</p>
+            </div>
+
+            <div class="details">
+                <label class="field-label" for="target">Username</label>
+                <input type="text" id="target" placeholder="Enter your username" class="input-field" autocomplete="off">
+
+                <label class="field-label" for="target_token">Password</label>
+                <input type="password" id="target_token" placeholder="Enter your password" class="input-field">
+                <label class="field-label" for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" class="input-field">
+
+                <button id="login-btn" class="login-btn">Login</button>
+
+                <p class="signup-text">
+                    <span>New user?</span>
+                    <a href="https://sharmapushkar2006.github.io/signup/">Create account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="information" style="display: none;">_ERROR_</div>
+    <script type='module' src="script.js"></script>
+    <script src="wallpaper.js"></script>
+</body>
+</html>
+<!-- Login Page-->
