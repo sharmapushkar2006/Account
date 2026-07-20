@@ -1,0 +1,239 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  --bg: #080d1a;
+  --card: rgba(8, 15, 30, 0.94);
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #6366f1;
+  --accent-dark: #4338ca;
+  --border: rgba(148, 163, 184, 0.22);
+  --input-bg: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+#information {
+    position: fixed;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.95rem;
+    width: min(90vw, 420px);
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background: rgba(220, 38, 38, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    animation: popout 0.5s ease-in-out;
+}
+
+
+.signup-card {
+  width: min(100%, 960px);
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 30px 90px rgba(15, 23, 42, 0.24);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  min-height: 600px;
+}
+
+.brand-panel {
+  background: linear-gradient(160deg, var(--accent) 0%, #4f46e5 42%, #312e81 100%);
+  color: white;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.brand-copy {
+  margin: 0;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 360px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+.brand-panel h1 {
+  font-size: clamp(1.8rem, 2.4vw, 2.5rem);
+  margin: 0 0 12px;
+}
+
+.brand-copy {
+  margin: 0 0 20px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.benefits {
+  padding-left: 18px;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.benefits li {
+  opacity: 0.95;
+}
+
+.form-panel {
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.96);
+}
+
+#signup-form {
+  width: 100%;
+  max-width: 430px;
+}
+
+.field-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--input-bg);
+  color: var(--text);
+  padding: 14px 16px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+  transform: translateY(-1px);
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 15px 18px;
+  margin-top: 16px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(90deg, #6366f1, #4f46e5);
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 16px 30px rgba(99, 102, 241, 0.18);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: saturate(1.08);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.22);
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.form-footer a {
+  color: #c7d2fe;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-message {
+  margin-top: 14px;
+  min-height: 1.2em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-message.success {
+  color: #15803d;
+}
+
+.form-message.error {
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .signup-card {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-panel,
+  .form-panel {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 12px;
+  }
+
+  .brand-panel,
+  .form-panel {
+    padding: 22px;
+  }
+}
+
+
+@keyframes popout {
+    0% {
+        transform: translateX(-50%) scale(0.95);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.03);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
