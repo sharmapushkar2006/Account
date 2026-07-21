@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.alert-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.alert-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.alert-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.alert-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.alert-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.alert-content {
+    padding: 25px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.alert-message {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.user-info {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid #667eea;
+}
+
+.user-avatar {
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.user-details {
+    flex-grow: 1;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.user-email {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.login-time {
+    color: #999;
+    font-size: 12px;
+}
+
+.info-text {
+    color: #555;
+    font-size: 14px;
+    margin: 0;
+}
+
+.alert-actions {
+    padding: 20px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-logout {
+    background: #f56565;
+    color: white;
+}
+
+.btn-logout:hover {
+    background: #e53e3e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 101, 101, 0.3);
+}
+
+.btn-continue {
+    background: #48bb78;
+    color: white;
+}
+
+.btn-continue:hover {
+    background: #38a169;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.alert-footer {
+    background: #f7fafc;
+    padding: 15px 20px;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+}
+
+.alert-footer p {
+    color: #718096;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .alert-card {
+        border-radius: 8px;
+    }
+    
+    .alert-header {
+        padding: 20px 15px;
+    }
+    
+    .alert-header h1 {
+        font-size: 20px;
+    }
+    
+    .alert-icon {
+        font-size: 40px;
+    }
+    
+    .alert-content {
+        padding: 20px 15px;
+    }
+    
+    .alert-actions {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

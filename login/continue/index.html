@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Alert - Already Logged In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="alert-container">
+        <div class="alert-card">
+            <div class="alert-header">
+                <div class="alert-icon">⚠️</div>
+                <h1>Authorization Required</h1>
+            </div>
+            
+            <div class="alert-content">
+                <p class="alert-message">Would you like to continue with your existing session?</p>
+                
+                <div class="user-info">
+                    <div class="user-avatar"></div>
+                    <div class="user-details">
+                        <h2 class="user-name" id="username"></h2>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="alert-actions">
+                <button class="btn btn-continue" id="continueBtn">Authorize and continue</button>
+                <button class="btn btn-continue"style="background-color:red;color:white;"onclick="window.history.back()" id="logoutBtn">Cancel</button>
+            </div>
+            
+            <div class="alert-footer">
+                <p>We are not responsible for any actions taken on third-party websites.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module"src="script.js"></script>
+</body>
+</html>
