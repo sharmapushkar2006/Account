@@ -1,4 +1,4 @@
-import { getDatabase, ref, update, get } from './firebase.js'
+import { getDatabase, ref, update, get } from '../firebase.js'
 
 const server = getDatabase();
 
@@ -93,8 +93,8 @@ function showInformation(message) {
 
 function redirectToDashboard() {
     if (typeof app_name === 'undefined' || app_name === null || app_name === '') {
-        // code to redirect to account management page
+        location.href="../signup"
     } else {
-        location.href="https://sharmapushkar.github.io/Login/continue?continue="+c+"&method=Token";
+        location.href="../continue?continue="+c+"&method=Token";
     }
 }
