@@ -2,17 +2,13 @@ import { database, ref, set, get } from './firebase.js';
 const form = document.getElementById('signup-form');
 const submitButton = document.getElementById('Submit-btn');
 const message = document.getElementById('form-message');
-let name, email, password, confirmPassword;
+var name, email, password, confirmPassword;
 const m = document.getElementById('information');
 
 submitButton.addEventListener('click', (event) => {
   event.preventDefault();
   basic_check();
 });
-
-
-
-
 
 function basic_check(){
    name = document.getElementById('name').value.trim();
@@ -53,7 +49,7 @@ const fsubmit = async () => {
     } else {
       await set(ref(database, 'users/' + name), {
         username: name,
-        email,
+        email:email,
         ban: 'no',
         password: enc,
       });
