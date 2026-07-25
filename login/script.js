@@ -93,7 +93,8 @@ function showInformation(message) {
 
 function redirectToDashboard() {
     if (typeof app_name === 'undefined' || app_name === null || app_name === '') {
-        location.href="../signup"
+        window.close();
+        showInformation("Login Success!! ")
     } else {
         location.href="../continue?continue="+c+"&method=Token";
     }
