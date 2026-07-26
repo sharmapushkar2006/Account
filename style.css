@@ -1,0 +1,216 @@
+/* CSS Reset & Variables */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --bg-color: #171b21;
+    --card-border: #30363d;
+    --text-main: #f0f6fc;
+    --text-secondary: #8b949e;
+    --accent-blue: #58a6ff;
+    --btn-blue: #1f6feb;
+    --btn-blue-hover: #165cbf;
+    --btn-red: #da3633;
+    --btn-red-hover: #b82b28;
+    --input-bg: #3d444d;
+    --avatar-bg: #21262d;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+}
+
+/* Top Navigation */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 12px;
+}
+
+.back-link {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Main Grid Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* Profile Section (Top Left) */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 10px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    background-color: var(--avatar-bg);
+    color: var(--accent-blue);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.profile-info h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.profile-info p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.edit-profile-btn {
+    align-self: flex-start;
+}
+
+/* Reusable Card Styles */
+.card {
+    background-color: transparent;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.card h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.form-group input {
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: var(--text-main);
+    font-size: 14px;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
+
+/* Buttons */
+.btn {
+    padding: 7px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--btn-blue);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-blue-hover);
+}
+
+.btn-danger {
+    background-color: var(--btn-red);
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: var(--btn-red-hover);
+}
+
+/* Specific Component Overrides */
+.apps-card {
+    grid-column: 1 / -1; /* Spans across both columns */
+}
+
+.apps-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.apps-list li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.apps-list .status {
+    color: var(--text-secondary);
+}
+
+.danger-card {
+    grid-column: 1; /* Stays in the left column */
+}
+
+.danger-card p {
+    font-size: 14px;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
