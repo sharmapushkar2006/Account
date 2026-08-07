@@ -14,7 +14,7 @@ if(!website || !method){
    document.write("ACCESS BLOCKED");
 }
 if(!token){
-  var x=window.open("https://sharmapushkar2006.github.io/Login","Login to continue","width=800,height=600,resizable=yes,scrollbars=yes")
+  var x=window.open("https://sharmapushkar2006.github.io/Account/login","Login to continue","width=800,height=600,resizable=yes,scrollbars=yes")
   const timer = setInterval(() => {
     if (x && x.closed) {
       clearInterval(timer); 
