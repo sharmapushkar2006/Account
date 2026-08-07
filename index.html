@@ -16,16 +16,16 @@
         <main class="content-grid">
             <section class="profile-section">
                 <div class="profile-header">
-                    <div class="avatar">JS</div>
+                    <div class="avatar"id="avtar">JS</div>
                     <div class="profile-info">
-                        <h2>$user_name_local_storage</h2>
-                        <p>$user_email_local_storage</p>
+                        <h2 id="name">$user_name_local_storage</h2>
+                        <p id="email">$user_email_local_storage</p>
                     </div>
                 </div>
                 <button class="btn btn-primary edit-profile-btn">Edit profile</button>
             </section>
             <section class="card password-card">
-                <h2>Change password</h2>
+                <h2>service not yet added</h2>
                 <form>
                     <div class="form-group">
                         <label for="current-password">Current password</label>
@@ -48,9 +48,18 @@
                 <h2>Danger zone</h2>
                 <p>Deleting your account is permanent.</p>
                 <button class="btn btn-danger">Delete account</button>
+                <button class="btn btn-danger">Or Logout</button>
             </section>
 
         </main>
     </div>
+    <script>
+        const avatarElement = document.getElementById('avtar');
+        const userNameElement = document.getElementById('name');
+        const userEmailElement = document.getElementById('email');
+        userNameElement.textContent = localStorage.getItem('username') || 'Not found';
+        userEmailElement.textContent = localStorage.getItem('email') || 'Not found';
+        avatarElement.textContent = localStorage.getItem('username').charAt(0).toUpperCase() || 'N';
+    </script>
 </body>
 </html>
