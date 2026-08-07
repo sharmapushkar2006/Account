@@ -12,7 +12,6 @@
     appId: "1:1046646181763:web:aed272f74d475c4e6130b6"
   };
 
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
   export { database,ref,push,set,get,child,update,remove,getDatabase };
